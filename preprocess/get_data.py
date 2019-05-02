@@ -133,7 +133,7 @@ class Dataset(object):
 class TaxiNYDataset(Dataset):
     time_interval = 30
     name = 'TaxiNY_%s' %  time_interval
-    data_filename = './datasets/grid_map_dict_%smin.pickle' % time_interval
+    data_filename = 'mtn/datasets/grid_map_dict_%smin.pickle' % time_interval
 
     def __init__(self, config):
         Dataset.__init__(self, config)
@@ -160,7 +160,7 @@ class TaxiNYDataset(Dataset):
 
 class BJPMDataset(Dataset):
     name = 'BJPM2_5'
-    data_filename = './datasets/PRSA_data_7col.csv'
+    data_filename = 'mtn/datasets/PRSA_data_7col.csv'
 
     def __init__(self, config):
         Dataset.__init__(self, config)
@@ -251,7 +251,7 @@ class BJPMDataset(Dataset):
 
 class SolarEnergyDataset(Dataset):
     name = 'SolarEnergy_2006'
-    data_filename = './datasets/solar_energy_2006_10min.csv'
+    data_filename = 'mtn/datasets/solar_energy_2006_10min.csv'
 
     def __init__(self, config):
         Dataset.__init__(self, config)
@@ -275,7 +275,7 @@ class SolarEnergyDataset(Dataset):
 
 class BikeNYCDataset(Dataset):
     name = 'BikeNYC'
-    data_filename = './datasets/NYC14_M16x8_T60_NewEnd.h5'
+    data_filename = 'mtn/datasets/NYC14_M16x8_T60_NewEnd.h5'
 
     def __init__(self, config):
         Dataset.__init__(self, config)
