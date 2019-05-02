@@ -17,8 +17,8 @@ from tensorflow.python import debug as tf_debug
 SCORE_TYPES = [['MAE', 'RMSE'], ['CORR', 'RSE']]
 
 
-CONFIG = BJpmConfig
-DS_HANDLER = BJPMDataset
+CONFIG = SolarEnergyConfig  #BJpmConfig
+DS_HANDLER = SolarEnergyDataset  #BJPMDataset
 score_type_index = 0
 
 is_train = True
@@ -127,12 +127,12 @@ def run_one_epoch(sess, model, batch_data, summary_writer, ds_handler, epoch_num
 
 
 def run_one_config(config):
-    epochs = 300
+    epochs = 100
 
     # learning rate decay
     max_lr = 0.003
     min_lr = 0.0001
-    decay_epochs = 60
+    decay_epochs = 20
 
     # build model
     with tf.Session() as sess:
